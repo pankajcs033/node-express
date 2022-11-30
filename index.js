@@ -11,6 +11,7 @@ const port = 3000;
 const app = express();
 app.use(morgan('dev'));
 app.use('/dishes', dishRouter);
+app.use('/dishes/:dishId', dishRouter);
 
 // tells to express to look into this folder for static html will serve
 app.use(express.static(__dirname + '/public'));
